@@ -1,0 +1,15 @@
+﻿import { defineConfig } from 'tsup';
+import { vanillaExtractPlugin } from '@vanilla-extract/esbuild-plugin';
+
+export default defineConfig({
+  entry: ['src/index.ts'],
+  format: ['esm', 'cjs'],
+  dts: true,
+  sourcemap: true,
+  clean: true,
+  treeshake: true,
+  target: 'es2022',
+  esbuildPlugins: [vanillaExtractPlugin({ identifiers: 'short' })],
+  external: ['react', 'react-dom'],
+  minify: false,
+});

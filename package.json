@@ -1,21 +1,42 @@
-﻿{
+{
   "name": "@tactum/mono",
   "private": true,
   "type": "module",
-  "packageManager": "pnpm@9",
+  "packageManager": "pnpm@9.15.0",
   "engines": {
     "node": ">=20",
     "pnpm": ">=9"
   },
   "scripts": {
-    "build": "turbo run build",
-    "clean": "turbo run clean --parallel",
-    "dev": "turbo run dev --parallel",
-    "lint": "eslint . --ext .js,.ts,.tsx --max-warnings=0 && turbo run lint",
+    "build": "pnpm exec turbo run build",
+    "clean": "pnpm exec turbo run clean --parallel",
+    "dev": "pnpm exec turbo run dev --parallel",
+    "lint": "eslint . --ext .js,.ts,.tsx --max-warnings=0 && pnpm exec turbo run lint",
     "lint:fix": "eslint . --ext .js,.ts,.tsx --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "test": "turbo run test",
-    "typecheck": "turbo run typecheck"
+    "test": "pnpm exec turbo run test",
+    "typecheck": "pnpm exec turbo run typecheck",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.29.6",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@eslint/js": "^9.33.0",
+    "@types/node": "20",
+    "@typescript-eslint/eslint-plugin": "^8.39.1",
+    "@typescript-eslint/parser": "^8.39.1",
+    "eslint": "^9.33.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "globals": "^16.3.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.5",
+    "prettier": "^3.6.2",
+    "turbo": "^2.5.6",
+    "typescript-eslint": "^8.39.1"
   }
 }

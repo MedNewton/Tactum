@@ -1,0 +1,42 @@
+{
+  "name": "@tactum/themes",
+  "version": "0.0.0",
+  "private": false,
+  "type": "module",
+  "sideEffects": true,
+  "description": "Tactum design tokens (CSS variables) with light/dark themes.",
+  "license": "MIT",
+  "author": "Tactum",
+  "files": [
+    "dist",
+    "src",
+    "README.md"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.11",
+    "@vanilla-extract/css": "^1.17.4",
+    "@vanilla-extract/esbuild-plugin": "^2.3.18",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.2"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "clean": "powershell -NoProfile -Command \"if(Test-Path dist){Remove-Item -Recurse -Force dist}\"",
+    "lint": "eslint . --ext .ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

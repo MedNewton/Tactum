@@ -6,7 +6,7 @@ node_modules/
 # builds/outputs
 dist/
 build/
-.storybook-static/
+**/storybook-static/
 .turbo/
 coverage/
 playwright-report/
