@@ -20,3 +20,9 @@ playwright-report/
 .idea/
 .vscode/*
 !.vscode/extensions.json
+
+**/dist/
+**/build/
+**/.turbo/
+**/storybook-static/
+
