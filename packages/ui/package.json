@@ -1,15 +1,19 @@
 {
   "name": "@tactum/ui",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": false,
   "type": "module",
-  "sideEffects": false,
+  "sideEffects": true,
   "description": "Tactum — SDK-agnostic Web3 UI components (ESM-first, SSR/RSC-safe).",
   "license": "MIT",
-  "author": "Tactum",
+  "author": "TheMoorishDev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MedNewton/Tactum.git"
+  },
+  "homepage": "https://github.com/MedNewton/Tactum",
   "files": [
     "dist",
-    "src",
     "README.md"
   ],
   "main": "./dist/index.cjs",
