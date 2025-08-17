@@ -1,0 +1,22 @@
+﻿# dependencies
+node_modules/
+.pnp.cjs
+.pnp.loader.mjs
+
+# builds/outputs
+dist/
+build/
+.storybook-static/
+.turbo/
+coverage/
+playwright-report/
+.vite/
+
+# env & editor
+.env*
+!.env.example
+.DS_Store
+*.log
+.idea/
+.vscode/*
+!.vscode/extensions.json

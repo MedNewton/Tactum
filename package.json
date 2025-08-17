@@ -1,0 +1,18 @@
+﻿{
+  "name": "@tactum/mono",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@9",
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=9"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "clean": "turbo run clean --parallel",
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "typecheck": "turbo run typecheck"
+  }
+}
