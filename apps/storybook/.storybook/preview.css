@@ -1,0 +1,21 @@
+/* Make Storybook canvas/docs wrappers inherit our tokens */
+:root,
+html,
+body,
+#storybook-root,
+.sb-show-main,
+.sb-main-centered,
+.docs-story,
+.sbdocs-wrapper,
+.sbdocs-content,
+.innerZoomElementWrapper {
+  background: var(--tctm-bg) !important;
+  color: var(--tctm-text) !important;
+}
+
+/* Remove any default borders/shadows some themes add */
+.sbdocs-wrapper,
+.docs-story {
+  box-shadow: none !important;
+  border: 0 !important;
+}

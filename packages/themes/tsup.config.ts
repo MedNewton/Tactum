@@ -7,8 +7,11 @@ export default defineConfig({
   dts: true,
   sourcemap: true,
   clean: true,
+  treeshake: true,
   target: 'es2022',
-  esbuildPlugins: [vanillaExtractPlugin({ identifiers: 'short' })],
+  // 👇 THIS is what makes VE emit CSS for your tokens.css.ts
+  esbuildPlugins: [vanillaExtractPlugin()],
+  // themes is pure side-effect (registers CSS vars), keep it simple
   external: [],
   minify: false,
 });
